@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Amount
+    <input type="text" id="sotien" >
+    From currently
+    <select id="select1">
+        <option value="vnd">VietNam</option>
+        <option value="usd"> USD</option>
+    </select>
+    To currently
+    <select id="select2">
+        <option value="usd">USD</option>
+        <option value="vnd">VietNam</option>
+    </select>
+<p id="result"></p>
+   <input type="button" value="covert" onclick="covert()">
+    <script>
+function covert() {
+    let select1 = document.getElementById("select1").value;
+    let select2 = document.getElementById("select2").value;
+    let sotien=document.getElementById("sotien").value
+    if( select1 ==="vnd" && select2 ==="usd")
+    { document.getElementById("result").innerHTML = "result : " + sotien/23000;}
+    else if (select1 ==="usd" && select2 ==="vnd")
+        document.getElementById("result").innerHTML = "result : " + sotien*23000;
+}
+    </script>
+</form>
+</body>
+</html>
+
